@@ -34,11 +34,11 @@ public class Fizzbuzz {
         return Integer.toString(number).contains("3");
     }
 
-    private static boolean divisibleByThree(Integer number) {
+    private static boolean divisibleByThree(int number) {
         return number % 3 == 0;
     }
 
-    private static boolean divisibleByFive(Integer number) {
+    private static boolean divisibleByFive(int number) {
         return number % 5 == 0;
     }
 }
