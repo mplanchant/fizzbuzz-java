@@ -11,14 +11,17 @@ public class Fizzbuzz {
 
     private static final String FIZZ = "fizz";
     private static final String BUZZ = "buzz";
+    private static final String FIZZBUZZ = "fizzbuzz";
     private static final String LUCKY = "lucky";
 
     public static List<String> of(int start, int end) {
         checkArgument(start > 0, "Argument start was %s but expected to be greater than zero", start);
         checkArgument(end >= start, "Argument end was %s but expected to be greater than or equal to start", end);
-        return IntStream.rangeClosed(start, end)
+        List<String> values = IntStream.rangeClosed(start, end)
                 .mapToObj(Fizzbuzz::of)
                 .collect(Collectors.toList());
+        printStatistics(values);
+        return values;
     }
 
     private static String of(int number) {
@@ -40,5 +43,33 @@ public class Fizzbuzz {
 
     private static boolean divisibleByFive(Integer number) {
         return number % 5 == 0;
+    }
+
+    private static void printStatistics(List<String> values) {
+        int noOfFizz = 0, noOfBuzz = 0, noOfFizzbuzz = 0, noOfLucky = 0, noOfNumber = 0;
+        for (String value : values) {
+            switch (value) {
+                case FIZZ:
+                    noOfFizz++;
+                    break;
+                case BUZZ:
+                    noOfBuzz++;
+                    break;
+                case FIZZBUZZ:
+                    noOfFizzbuzz++;
+                    break;
+                case LUCKY:
+                    noOfLucky++;
+                    break;
+                default:
+                    noOfNumber++;
+                    break;
+            }
+        }
+        System.out.println("fizz: " + noOfFizz);
+        System.out.println("buzz: " + noOfBuzz);
+        System.out.println("fizzbuzz: " + noOfFizzbuzz);
+        System.out.println("lucky: " + noOfLucky);
+        System.out.println("number: " + noOfNumber);
     }
 }
