@@ -23,7 +23,7 @@ public class Fizzbuzz {
         checkArgument(start > 0, "Argument start was %s but expected to be greater than zero", start);
         checkArgument(end >= start, "Argument end was %s but expected to be greater than or equal to start", end);
         final Map<String, Integer> stats = new HashMap<>();
-        List<String> results = IntStream.rangeClosed(start, end).mapToObj(value -> of(value, stats)).collect(Collectors.toList());
+        final List<String> results = IntStream.rangeClosed(start, end).mapToObj(value -> of(value, stats)).collect(Collectors.toList());
         MapUtils.verbosePrint(System.out, "Fizzbuzz Stats", stats);
         return results;
     }
