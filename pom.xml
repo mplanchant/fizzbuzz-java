@@ -16,7 +16,7 @@
         <guava.version>23.0</guava.version>
         <junit.version>4.12</junit.version>
         <assertj-core.version>3.13.2</assertj-core.version>
-        <commons-collections4.version>4.3</commons-collections4.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
         <errorprone.version>2.3.3</errorprone.version>
     </properties>
 
