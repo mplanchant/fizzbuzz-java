@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <guava.version>23.0</guava.version>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <assertj-core.version>3.15.0</assertj-core.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <errorprone.version>2.3.3</errorprone.version>
